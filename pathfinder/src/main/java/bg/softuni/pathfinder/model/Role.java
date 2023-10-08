@@ -1,5 +1,6 @@
 package bg.softuni.pathfinder.model;
 
+import bg.softuni.pathfinder.model.enums.UserRoles;
 import jakarta.persistence.*;
 
 @Entity
