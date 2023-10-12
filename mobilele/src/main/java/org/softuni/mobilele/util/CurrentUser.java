@@ -3,7 +3,7 @@ package org.softuni.mobilele.util;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.SessionScope;
 
-@Component
+@Component("currentUser")
 @SessionScope
 public class CurrentUser {
 

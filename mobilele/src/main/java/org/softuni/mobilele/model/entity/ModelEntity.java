@@ -4,10 +4,9 @@ import jakarta.persistence.*;
 import org.softuni.mobilele.model.enums.ModelCategoryEnum;
 
 @Entity
-@Table(name= "models")
-public class ModelEntity extends BaseEntity{
+@Table(name="models")
+public class ModelEntity extends BaseEntity {
 
-    @Column
     private String name;
 
     @Enumerated(EnumType.STRING)
@@ -20,23 +19,35 @@ public class ModelEntity extends BaseEntity{
         return name;
     }
 
-    public void setName(String name) {
+    public ModelEntity setName(String name) {
         this.name = name;
+        return this;
     }
 
     public ModelCategoryEnum getCategory() {
         return category;
     }
 
-    public void setCategory(ModelCategoryEnum category) {
+    public ModelEntity setCategory(ModelCategoryEnum category) {
         this.category = category;
+        return this;
     }
 
     public BrandEntity getBrand() {
         return brand;
     }
 
-    public void setBrand(BrandEntity brand) {
+    public ModelEntity setBrand(BrandEntity brand) {
         this.brand = brand;
+        return this;
+    }
+
+    @Override
+    public String toString() {
+        return "ModelEntity{" +
+                "name='" + name + '\'' +
+                ", category=" + category +
+                ", brand=" + brand +
+                '}';
     }
 }
